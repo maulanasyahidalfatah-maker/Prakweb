@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Latihan HTML Bagian C</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 40%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Halaman HTML Ketiga</h1>
+
+    <p>Ini adalah contoh paragraf yang dibuat menggunakan tag &lt;p&gt;.</p>
+
+    <p>Di dalam paragraf ini, ada teks yang <u>digarisbawahi (underline)</u> menggunakan tag &lt;u&gt;.</p>
+
+    <h2>Contoh Link dengan Target</h2>
+    <p>Seperti contoh sebelumnya, link ini akan membuka website di tab baru karena menggunakan atribut <b>target="_blank"</b>.</p>
+    <a href="https://www.w3schools.com" target="_blank">Kunjungi W3Schools (Tab Baru)</a>
+
+    <h2>Contoh Gambar</h2>
+    <p>Gambar di bawah ini ditampilkan menggunakan tag &lt;img&gt;.</p>
+    <img src="https://via.placeholder.com/400x120" alt="Ini adalah gambar placeholder 400x120">
+
+    <h2>Tabel (1 Kolom dan 3 Baris)</h2>
+    <table>
+        <tr>
+            <th>Header Kolom</th>
+        </tr>
+        <tr>
+            <td>Data Baris 2</td>
+        </tr>
+        <tr>
+            <td>Data Baris 3</td>
+        </tr>
+    </table>
+
+    <h2>List Kustom (Huruf Kecil)</h2>
+    <p>List ini menggunakan huruf kecil (type="a") dan dimulai dari urutan ke-2 (start="2"), yaitu huruf 'b':</p>
+    
+    <ol type="a" start="2">
+        <li>Item pertama (dimulai dari b)</li>
+        <li>Item kedua (c)</li>
+        <li>Item ketiga (d)</li>
+        <li>Item keempat (e)</li>
+    </ol>
+
+</body>
+</html>
