@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Latihan HTML Bagian 2</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Tag HTML</h1>
+
+    <p>Ini adalah teks paragraf biasa. <i>Teks ini miring (italic)</i> menggunakan tag &lt;i&gt;. Ada juga tag &lt;em&gt; yang <em>terlihat sama</em>, namun memiliki makna semantik "penekanan".</p>
+
+    <h2>Contoh Gambar</h2>
+    <p>Ini adalah tag &lt;img&gt; untuk menampilkan gambar.</p>
+    <img src="https://via.placeholder.com/400x100" alt="Gambar placeholder 400x100">
+
+    <h2>Contoh Break</h2>
+    <p>Tag &lt;br&gt; digunakan untuk memaksa pindah baris<br>tanpa harus membuat paragraf baru.<br>Lihat, baris ini ada di bawah.</p>
+
+    <h2>Contoh Link</h2>
+    <p>Ini adalah tautan standar (link) ke situs lain. Tidak seperti contoh sebelumnya, link ini akan terbuka di tab yang sama.</p>
+    <a href="https://www.wikipedia.org">Klik di sini untuk membuka Wikipedia</a>
+
+    <h2>Tabel (4 Kolom dan 2 Baris)</h2>
+    <table>
+        <tr>
+            <th>Header Kolom 1</th>
+            <th>Header Kolom 2</th>
+            <th>Header Kolom 3</th>
+            <th>Header Kolom 4</th>
+        </tr>
+        <tr>
+            <td>Baris 2, Sel 1</td>
+            <td>Baris 2, Sel 2</td>
+            <td>Baris 2, Sel 3</td>
+            <td>Baris 2, Sel 4</td>
+        </tr>
+    </table>
+
+    <h2>List Romawi Kustom</h2>
+    <p>List ini menggunakan angka Romawi (type="I") dan dimulai dari urutan ke-10 (start="10"), yaitu 'X':</p>
+    
+    <ol type="I" start="10">
+        <li>Item pertama (dimulai dari X)</li>
+        <li>Item kedua (XI)</li>
+        <li>Item ketiga (XII)</li>
+        <li>Item keempat (XIII)</li>
+    </ol>
+
+</body>
+</html>
