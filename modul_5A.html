@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Membuat Form</title>
+</head>
+<body>
+
+    <form action="formulir.html" method="get">
+
+        <div>
+            <label for="nama_input">Nama:</label>
+            <input type="text" id="nama_input" name="nama" value="Nama Kamu" />
+        </div>
+
+        <div>
+            <label for="pass_input">Password:</label>
+            <input type="password" id="pass_input" name="password" />
+        </div>
+        
+        <fieldset>
+            <legend>Jenis Kelamin:</legend>
+            
+            <label>
+                <input type="radio" name="jenis_kelamin" value="laki-laki" checked /> Laki - Laki
+            </label>
+            
+            <label>
+                <input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan
+            </label>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobi:</legend>
+            
+            <label>
+                <input type="checkbox" name="hobi_baca" /> Membaca Buku
+            </label>
+            
+            <label>
+                <input type="checkbox" name="hobi_nulis" checked /> Menulis
+            </label>
+            
+            <label>
+                <input type="checkbox" name="hobi_mancing" /> Memancing
+            </label>
+        </fieldset>
+
+        <div>
+            <label for="kota_select">Asal Kota:</label>
+            <select id="kota_select" name="asal_kota">
+                <option value="Kota Jakarta">Jakarta</option>
+                <option>Bandung</option>
+                <option value="Kota Semarang" selected>Semarang</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="komentar_textarea">Komentar Anda:</label>
+            <br />
+            <textarea id="komentar_textarea" name="komentar" rows="5" cols="20">Silahkan katakan isi hati anda</textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Mulai Proses" />
+        </div>
+
+    </form>
+
+</body>
+</html>
