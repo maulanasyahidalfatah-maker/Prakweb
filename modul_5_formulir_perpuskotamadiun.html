@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Kota Madiun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            padding: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #77aaff;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x400/007bff/ffffff?text=Perpustakaan+Madiun') no-repeat center center/cover;
+            color: #fff;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        section h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .book-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .book-item img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .book-item h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        .about-us {
+            background-color: #e9f7ff;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Perpustakaan Kota Madiun</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#katalog">Katalog Buku</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero" id="beranda">
+            <h2>Selamat Datang di Perpustakaan Kota Madiun</h2>
+        </div>
+
+        <section id="katalog">
+            <h2>Katalog Buku Terbaru</h2>
+            <div class="books-grid">
+                <div class="book-item">
+                    <img src="https://via.placeholder.com/200x250?text=Buku+Fiksi+1" alt="Buku Fiksi 1">
+                    <h3>Judul Buku Fiksi 1</h3>
+                    <p>Penulis: John Doe</p>
+                    <p>Genre: Fiksi</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://via.placeholder.com/200x250?text=Buku+Sejarah+2" alt="Buku Sejarah 2">
+                    <h3>Sejarah Madiun Era Kolonial</h3>
+                    <p>Penulis: Jane Smith</p>
+                    <p>Genre: Sejarah</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://via.placeholder.com/200x250?text=Buku+Anak+3" alt="Buku Anak 3">
+                    <h3>Petualangan Si Kancil</h3>
+                    <p>Penulis: Tim Penulis</p>
+                    <p>Genre: Anak-Anak</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://via.placeholder.com/200x250?text=Buku+Teknologi+4" alt="Buku Teknologi 4">
+                    <h3>Dasar-Dasar Pemrograman Web</h3>
+                    <p>Penulis: David Lee</p>
+                    <p>Genre: Teknologi</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang">
+            <h2>Tentang Perpustakaan Kami</h2>
+            <div class="about-us">
+                <p>Perpustakaan Kota Madiun berkomitmen untuk menjadi pusat pengetahuan dan literasi bagi seluruh masyarakat. Kami menyediakan berbagai koleksi buku, jurnal, dan sumber daya digital untuk mendukung pendidikan dan pengembangan diri.</p>
+                <p>Kunjungi kami di Jl. Pahlawan No. 1, Madiun atau hubungi kami untuk informasi lebih lanjut.</p>
+            </div>
+        </section>
+        
+        <section id="layanan">
+            <h2>Layanan Kami</h2>
+            <ul>
+                <li>Peminjaman & Pengembalian Buku</li>
+                <li>Pojok Baca Digital</li>
+                <li>Ruang Diskusi & Belajar</li>
+                <li>Program Literasi Komunitas</li>
+                <li>Keanggotaan Perpustakaan</li>
+            </ul>
+        </section>
+
+        <section id="kontak">
+            <h2>Hubungi Kami</h2>
+            <p>Alamat: Jl. Pahlawan No. 1, Madiun, Jawa Timur</p>
+            <p>Telepon: (0351) 123456</p>
+            <p>Email: info@perpustakaanmadiun.go.id</p>
+            <p>Jam Buka: Senin - Jumat, 08.00 - 16.00 WIB</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Perpustakaan Kota Madiun. Semua Hak Dilindungi.</p>
+        </footer>
+    </div>
+</body>
+</html>
