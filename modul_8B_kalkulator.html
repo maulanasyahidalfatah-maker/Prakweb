@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Maulana Syahid Sederhana</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; background-color: #f0f8ff; }
+        .container { max-width: 350px; margin: auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        h2 { color: #17a2b8; text-align: center; margin-bottom: 20px; }
+        input[type="text"] { width: 100%; padding: 12px; margin-bottom: 10px; border: 2px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 1.1em; }
+        .tombol-group { display: flex; justify-content: space-between; margin-top: 15px; }
+        .tombol-group button { 
+            width: 23%; 
+            padding: 15px 0; 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            background-color: #007bff; 
+            color: white; 
+            transition: background-color 0.2s;
+        }
+        .tombol-group button:hover { background-color: #0056b3; }
+        #hasil { margin-top: 20px; padding: 15px; background-color: #e9f7ff; border: 2px solid #17a2b8; border-radius: 5px; font-size: 1.3em; text-align: right; }
+        label { display: block; margin-top: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Kalkulator Maulana Syahid Sederhana</h2>
+
+        <label for="bil1">Bilangan 1:</label>
+        <input type="text" id="bil1" placeholder="Masukkan angka pertama">
+
+        <label for="bil2">Bilangan 2:</label>
+        <input type="text" id="bil2" placeholder="Masukkan angka kedua">
+
+        <div id="hasil">
+            0
+        </div>
+
+        <div class="tombol-group">
+            <button onclick="hitung('+')">+</button>
+            <button onclick="hitung('-')">-</button>
+            <button onclick="hitung('*')">x</button>
+            <button onclick="hitung('/')">/</button>
+        </div>
+    </div>
+
+    <script>
+        function hitung(operator) {
+            const bil1 = parseFloat(document.getElementById('bil1').value);
+            const bil2 = parseFloat(document.getElementById('bil2').value);
+            let hasil = 0;
+
+            if (isNaN(bil1) || isNaN(bil2)) {
+                document.getElementById('hasil').textContent = "Input harus berupa angka!";
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    hasil = bil1 + bil2;
+                    break;
+                case '-':
+                    hasil = bil1 - bil2;
+                    break;
+                case '*':
+                    hasil = bil1 * bil2;
+                    break;
+                case '/':
+                    if (bil2 === 0) {
+                        document.getElementById('hasil').textContent = "Tidak bisa dibagi nol!";
+                        return;
+                    }
+                    hasil = bil1 / bil2;
+                    break;
+                default:
+                    hasil = "Error";
+            }
+
+            // Kunci Perbaikan: Menghilangkan '.00' jika hasil adalah bilangan bulat
+            if (Number.isInteger(hasil)) {
+                // Jika hasilnya bilangan bulat (misalnya 10), tampilkan 10 (bukan 10.00)
+                document.getElementById('hasil').textContent = hasil;
+            } else {
+                // Jika hasilnya desimal (misalnya 3.3333), bulatkan menjadi 2 angka desimal
+                document.getElementById('hasil').textContent = hasil.toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
