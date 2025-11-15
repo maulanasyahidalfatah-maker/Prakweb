@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Anggota Perpustakaan Kota Madiun</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #e6f7ff; padding: 20px; }
+        .container { background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 650px; margin: auto; }
+        h2 { color: #007bff; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-bottom: 25px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input[type="text"], input[type="password"], textarea, select { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box;
+        }
+        fieldset { border: 1px solid #007bff; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        legend { font-weight: bold; color: #007bff; padding: 0 10px; }
+        .inline-input label { display: inline-block; margin-right: 15px; font-weight: normal; }
+        button { background-color: #28a745; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 25px; width: 100%; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>FORMULIR PENDAFTARAN ANGGOTA PERPUSTAKAAN KOTA MADIUN</h2>
+    
+    <form action="proses_pendaftaran.php" method="post">
+        
+        <div class="form-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama_lengkap" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Kata Sandi (Untuk Akses Online):</label>
+            <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required>
+        </div>
+        
+        <fieldset>
+            <legend>Informasi Dasar</legend>
+            <div class="form-group inline-input">
+                <label>Jenis Kelamin:</label>
+                <label><input type="radio" name="jenis_kelamin" value="Laki-laki" checked> Laki-laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="pendidikan">Pendidikan Terakhir:</label>
+                <select id="pendidikan" name="pendidikan" required>
+                    <option value="">-- Pilih Jenjang --</option>
+                    <option value="SMA">SMA/SMK</option>
+                    <option value="D3">Diploma (D3)</option>
+                    <option value="S1" selected>Sarjana (S1)</option>
+                    <option value="S2">Pascasarjana (S2/S3)</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <label for="alamat">Alamat Lengkap (Domisili Madiun):</label>
+            <textarea id="alamat" name="alamat" rows="4" placeholder="Alamat Jalan, Kelurahan, Kecamatan" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Minat Genre Buku (Pilih satu atau lebih):</label>
+            <div class="inline-input">
+                <label><input type="checkbox" name="minat[]" value="Fiksi"> Fiksi</label>
+                <label><input type="checkbox" name="minat[]" value="Sejarah" checked> Sejarah</label>
+                <label><input type="checkbox" name="minat[]" value="Teknologi"> Teknologi</label>
+                <label><input type="checkbox" name="minat[]" value="Anak"> Anak-anak</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">
+                <input type="submit" value="Kirim Pendaftaran" style="all: unset; cursor: pointer;">
+            </button>
+        </div>
+        
+    </form>
+</div>
+
+</body>
+</html>
